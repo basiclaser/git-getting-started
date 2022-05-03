@@ -3,14 +3,10 @@ body {
 }
 nav {
   border: 2px solid green;
-  display: flex;
-  justify-content: space-between;
 }
 
 .nav-left {
   border: 2px solid green;
-  display: flex;
-  align-items: center;
 }
 
 .nav-right {
@@ -20,8 +16,6 @@ nav {
 
 ul {
   border: 2px solid green;
-  display: flex;
-  justify-content: space-between;
   padding: 0;
   list-style-type: none;
 }
@@ -36,8 +30,6 @@ header {
 
 #duck {
   border: 2px solid yellow;
-  display: flex;
-  justify-content: space-around;
 }
 #duck .text,
 #duck .duck-image {
@@ -50,8 +42,6 @@ header {
 
 .text {
   border: 2px solid yellow;
-  display: flex;
-  align-items: center;
 }
 
 .text p {
@@ -66,13 +56,24 @@ header {
   border: 2px solid blue;
 }
 
-.grid-container {
+/* .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+} */
+.grid-container {
+  border: solid blue;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3px;
+  width: 80%;
 }
 
 .grid-item {
-  border: 2px solid pink;
+  border: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
 }
 
 footer {
@@ -84,8 +85,24 @@ footer form {
   align-items: center;
   row-gap: 1rem;
 }
-footer form * {
+
+footer form input,
+footer form textarea {
+  width: 439px;
+  max-width: 100%;
+}
+
+.p10 {
   padding: 10px;
+}
+.p20 {
+  padding: 20px;
+}
+.p30 {
+  padding: 30px;
+}
+.p40 {
+  padding: 40px;
 }
 
 /* ABSTRACTION */
@@ -95,5 +112,24 @@ footer form * {
 .col {
   flex-direction: column;
 }
+.space-between {
+  justify-content: space-between;
+}
+.space-around {
+  justify-content: space-around;
+}
+.center {
+  justify-content: center;
+}
+.align-center {
+  align-items: center;
+}
 
 /* DRY dont repeat yourself */
+
+/* VIEWPORT SIZE */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 2em;
+  }
+}
