@@ -39,6 +39,11 @@ header {
   display: flex;
   justify-content: space-around;
 }
+#duck .text,
+#duck .duck-image {
+  width: 50%;
+}
+
 #duck img {
   width: 100%;
 }
@@ -72,4 +77,23 @@ header {
 
 footer {
   border: 2px solid red;
+  text-align: center;
 }
+footer form {
+  width: 100%;
+  align-items: center;
+  row-gap: 1rem;
+}
+footer form * {
+  padding: 10px;
+}
+
+/* ABSTRACTION */
+.flex {
+  display: flex;
+}
+.col {
+  flex-direction: column;
+}
+
+/* DRY dont repeat yourself */
