@@ -1,8 +1,8 @@
 body {
   background: pink;
   margin: 20px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 
 nav {
@@ -32,6 +32,14 @@ header {
   border: 2px solid orange;
 }
 
+#football {
+  margin-left: 0;
+  transition: margin-left 4s ease-out;
+}
+#football-pitch:hover #football {
+  margin-left: 300px;
+}
+
 #duck {
   border: 2px solid yellow;
 }
@@ -39,9 +47,39 @@ header {
 #duck .duck-image {
   width: 50%;
 }
+#duck .text {
+  color: black;
+  transition: color s linear;
+}
+#duck .text:hover {
+  color: white;
+}
 
-#duck img {
+.duck-image {
   width: 100%;
+  animation: spin 4s linear infinite;
+  /* transform: rotate(180deg); */
+}
+
+@keyframes spin {
+  0% {
+    filter: blur(0px);
+    filter: grayscale(0);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  80% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    filter: blur(100px);
+    filter: grayscale(1);
+  }
 }
 
 .text {
