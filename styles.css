@@ -39,6 +39,9 @@ header {
   display: flex;
   justify-content: space-around;
 }
+#duck img {
+  width: 100%;
+}
 
 .text {
   border: 2px solid yellow;
@@ -59,7 +62,8 @@ header {
 }
 
 .grid-container {
-  border: 2px solid blue;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .grid-item {
